@@ -1,0 +1,27 @@
+:root{--ink:#12263a;--bg:#f6f8fa;--teal:#0f766e;--gold:#f2b705;--line:#d8dee4;--white:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Trebuchet MS",system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+header{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem;background:var(--ink);color:var(--white)}
+h1{margin:0;font-size:1.4rem}
+button{font:inherit;padding:.6rem 1rem;border:1px solid var(--line);border-radius:6px;background:var(--white);cursor:pointer}
+button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+button.primary{background:var(--teal);color:var(--white);border-color:var(--teal)}
+header button{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:bold}
+#products{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;padding:1.5rem}
+.card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:1rem;display:flex;flex-direction:column;gap:.5rem}
+.card .emoji{font-size:3rem;text-align:center}
+.card .price{font-weight:bold;color:var(--teal)}
+#cart{position:fixed;top:0;right:0;width:min(380px,100%);height:100%;background:var(--white);padding:1.2rem;box-shadow:-4px 0 16px rgba(0,0,0,.15);overflow:auto}
+#cart[hidden]{display:none}
+#lines{list-style:none;padding:0}
+#lines li{display:grid;grid-template-columns:1fr auto;gap:.3rem;padding:.6rem 0;border-bottom:1px solid var(--line)}
+.qty button{padding:.1rem .6rem}
+.promo{display:flex;gap:.5rem}.promo input{flex:1}
+input{padding:.5rem;border:1px solid var(--line);border-radius:6px;font:inherit;width:100%}
+dl{display:grid;grid-template-columns:1fr auto;gap:.3rem}dt,dd{margin:0}.total{font-weight:bold;font-size:1.15rem}
+#cart .primary{width:100%;margin:.5rem 0}
+dialog{border:none;border-radius:10px;padding:1.5rem;width:min(420px,92%)}
+dialog::backdrop{background:rgba(18,38,58,.6)}
+.row{display:flex;gap:.6rem;margin-bottom:.6rem}label{flex:1;display:block;font-size:.9rem}
+#pay-msg,#promo-msg{min-height:1.2rem;font-size:.9rem;color:#b42318}
+#promo-msg.ok{color:var(--teal)}

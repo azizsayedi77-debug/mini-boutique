@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mini Boutique – Panier de paiement</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Mini Boutique</h1><button id="open-cart">Panier (<span id="count">0</span>)</button></header>
+<main>
+  <section id="products" aria-label="Catalogue"></section>
+</main>
+<aside id="cart" aria-label="Panier" hidden>
+  <h2>Votre panier</h2>
+  <ul id="lines"></ul>
+  <div class="promo"><input id="promo" placeholder="Code promo (PROMO10)"><button id="apply">Appliquer</button></div>
+  <p id="promo-msg" role="status"></p>
+  <dl>
+    <dt>Sous-total</dt><dd id="subtotal">0.00 DT</dd>
+    <dt>Remise</dt><dd id="discount">0.00 DT</dd>
+    <dt class="total">Total</dt><dd id="total" class="total">0.00 DT</dd>
+  </dl>
+  <button id="checkout" class="primary">Passer au paiement</button>
+  <button id="close-cart">Fermer</button>
+</aside>
+<dialog id="pay">
+  <h2>Paiement (simulé)</h2>
+  <div class="row"><label>Nom sur la carte<input id="name"></label></div>
+  <div class="row"><label>Numéro de carte<input id="card" inputmode="numeric" placeholder="16 chiffres"></label></div>
+  <div class="row"><label>Expiration<input id="exp" placeholder="MM/AA"></label><label>CVV<input id="cvv" placeholder="3 chiffres"></label></div>
+  <p id="pay-msg" role="alert"></p>
+  <button id="confirm" class="primary">Payer</button>
+  <button id="cancel">Annuler</button>
+</dialog>
+<dialog id="done"><h2>Commande confirmée</h2><p id="receipt"></p><button id="ok" class="primary">Fermer</button></dialog>
+<script src="script.js"></script>
+</body>
+</html>
